@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+	<link rel="stylesheet" type="text/css" href="array.css">
+	<script type="text/javascript" src="array.js"></script>
+
+</head>
+
+<body>
+	<div class="view">
+		<!-- 页面说明 -->
+		<div class="header">输入一组数据，统计出现次数最多的数，并打印所在的位置。<br><small>每个数之间必须用英文状态下的“ , ”号隔开；结尾不需要“ , ”号。 </small></div>
+		<!-- end 页面说明 -->
+		<!-- 数据输入 -->
+		<div class="ipt-wrapper">
+			<input type="text" id="ipt" name="ipt" value="a,x,b,d,m,a,k,m,p,j,a">
+			<button type="button" onclick="tjArr()">统计出现次数最多的数</button>
+		</div>
+		<!-- end数据输入 -->
+		<!-- 统计结果 -->
+		<div class="result-wrapper" id="result-wrapper">
+			<p><span id="resultA"></span><span id="resultB"></span></p>
+			<p><span id="resultC"></span><span id="resultD"></span></p>
+			<p><span id="resultE"></span></p>
+		</div>
+		<!-- end统计结果 -->
+	</div>
+</body>
+</html>

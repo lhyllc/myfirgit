@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>box_flexBox</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 正常盒子与怪异盒子对比 -->
+        <h2>正常盒子与怪异盒子对比</h2>
+        <div class="con clearfloat">
+            <div class="boxkuang">
+                <div class="box">
+                    我是一个正常的盒子:
+                    <br>width=150px；height=110px
+                    <br>
+                    <br>我的外框设置的尺寸：
+                    <br>width=150px;height=110px
+                    <br>border=5px;padding=10px
+                </div>
+            </div>
+            <div class="gboxkuang">
+                <div class="gbox">
+                    我是一个怪异的盒子:
+                    <br>width=150px；height=110px
+                    <br>
+                    <br>我的外框设置的尺寸：
+                    <br>width=170px;height=130px
+                    <br>border=5px;padding=10px
+                </div>
+            </div>
+        </div>
+        <!-- end 正常盒子与怪异盒子对比 -->
+        <!-- 弹性盒子水平分栏 -->
+        <h2>弹性盒子水平分栏</h2>
+        <ul class="flexcon">
+            <li class="flexgrow1">第一个盒子
+                <br>flex-grow=1</li>
+            <li>第二个盒子</li>
+            <li class="flexgrow3">第三个盒子
+                <br>flex-grow=3</li>
+            <li>第四个盒子</li>
+        </ul>
+        <!-- end 弹性盒子水平分栏 -->
+        <!-- 弹性盒子垂直分栏 -->
+        <h2>弹性盒子垂直分栏</h2>
+        <ul class="flexcon vertical">
+            <li>第一个盒子</li>
+            <li>第二个盒子</li>
+            <li>第三个盒子</li>
+            <li>第四个盒子</li>
+        </ul>
+        <!-- end 弹性盒子垂直分栏 -->
+        <!-- 弹性盒子排序 -->
+        <h2>弹性盒子排序(order)</h2>
+        <ul class="flexcon">
+            <li class="order2">第一个盒子
+                <br>order=2</li>
+            <li class="order1">第二个盒子
+                <br>order=1</li>
+            <li class="order4">第三个盒子
+                <br>order=4</li>
+            <li class="order3">第四个盒子
+                <br>order=3</li>
+        </ul>
+        <!-- end 弹性盒子排序 -->
+        <!-- cloumn分栏 -->
+        <h2>cloumn分栏</h2>
+        <div class="column">
+            <p>对于A、B两公司生产电池的受损情况（在后续问答环节中，三星确定A公司是电池供应商SDI，B公司则是中国电池厂商ATL，新浪科技注）高东真介绍道，A和B受损比例很难对比，第一次召回的时候当时认为A公司生产的电池没有在B身上发生。权威机构也认为B电池没问题。“在实验室，我们对20万台设备进行充放电，两种电池有差异，但并没有太大差异”。</p>
+            <p>针对新浪科技提出的“同样是采用了B电池的苹果，为什么没出问题电池问题”，三星电子移动通信部总裁高东真未予回应。</p>
+        
+            <p>高东真称，三星电子今后将产品品质和产品安全置于首位。将吸取教训，将研发、生产、品控提高到一个新的高度。</p>
+        </div>
+        <!-- end cloumn分栏 -->
+        <!-- 旧版弹性盒子居中布局 -->
+        <h2>旧版弹性盒子与新版弹性盒子的居中布局</h2>
+        <ul class="flexbox">
+            <li>旧版盒子<br>display = -webkit-box;<br>box-pack = center;<br>box-align = center;<br>IE完全不支持</li>
+        </ul>
+        <!-- end 旧版弹性盒子居中布局 -->
+        <!-- 新版弹性盒子居中布局 -->
+        <ul class="xflexbox">
+            <li>新版盒子<br>display:-webkit-flex;<br>justify-content = center;<br>align-items = center;</li>
+        </ul>
+        <!-- end 新版弹性盒子居中布局 -->
+    </div>
+</body>
+
+</html>

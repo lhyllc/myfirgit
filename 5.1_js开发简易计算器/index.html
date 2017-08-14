@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>modify JSCalc</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<script type="text/javascript" src="calc.js"></script>
+</head>
+<!-- 
+思路:分别把运算符及运算符前面的数和运算符后面的数赋给不同的ID（X,Y,YSF），然后再通过运算符的情况来做相应的运算;
+tofixed()解决浮点数运算bug,type string;
+Number() 转换成数值显示;
+-->
+<body>
+	<div class="view">
+		<!-- 计算器标题 -->
+		<div class="header">简易计算器 <mark>修改版</mark></div>
+		<!-- end 计算器标题 -->
+		<!-- 数字显示屏幕 -->
+		<div class="showscreen">
+			<input type="text" name="X" id="X" value="" class="hidden" disabled="disabled">
+			<input type="text" name="YSF" id="YSF" value="" class="hidden" disabled="disabled">
+			<input type="text" name="Y" id="Y" value="" class="hidden" disabled="disabled">
+			<input type="text" name="showScreen" id="showScreen" disabled="disabled" value="">
+		</div>
+		<!-- end 数字显示屏幕 -->
+		<!-- 错误提示 -->
+		<div id="error"></div>
+		<!-- end 错误提示 -->
+		<!-- 按钮组 -->
+		<div class="numbox">
+			<!-- 第一排 -->
+			<input type="button" id="clear" onclick="clearNum()" value="C" class="wid130">
+			<input type="button" id="%" onclick="getYsf(this.id)" value="%" title="取余数运算">
+			<input type="button" id="÷" onclick="getYsf(this.id)" value="÷" title="除法运算">
+			<!-- 第一排 -->
+			<input type="button" id="7" onclick="getNum(this.id)" value="7">
+			<input type="button" id="8" onclick="getNum(this.id)" value="8">
+			<input type="button" id="9" onclick="getNum(this.id)" value="9">
+			<input type="button" id="×" onclick="getYsf(this.id)" value="×" title="乘法运算">
+			<!-- 第二排 -->
+			<input type="button" id="4" onclick="getNum(this.id)" value="4">
+			<input type="button" id="5" onclick="getNum(this.id)" value="5">
+			<input type="button" id="6" onclick="getNum(this.id)" value="6">
+			<input type="button" id="－" onclick="getYsf(this.id)" value="－" title="减法运算">
+			<!-- 第三排 -->
+			<input type="button" id="1" onclick="getNum(this.id)" value="1">
+			<input type="button" id="2" onclick="getNum(this.id)" value="2">
+			<input type="button" id="3" onclick="getNum(this.id)" value="3">
+			<input type="button" id="＋" onclick="getYsf(this.id)" value="＋" title="加法运算">
+			<!-- 第四排 -->
+			<input type="button" id="0" onclick="getNum(this.id)" value="0">
+			<input type="button" id="." onclick="getPoint(this.id)" value=".">
+			<input type="button" id="count" onclick="getCount()" value="=" class="wid130">
+		</div>
+		<!-- end 按钮组 -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+    body {
+        padding-top: 70px;
+    }
+    
+    .btn-danger {
+        margin-left: 5px;
+    }
+    /*新闻列表*/
+    
+    table>thead>tr>th {
+        text-align: center;
+        font-weight: 400;
+    }
+    
+    table>tbody>tr>td {
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    table>tbody>tr>td:nth-child(3) {
+        text-align: left;
+    }
+    
+    table>tbody>tr>td:first-child {
+        border-left: 0;
+    }
+    
+    table>tbody>tr>td:last-child {
+        border-right: 0;
+    }
+    
+    table tr>th:nth-child(1) {
+        width: 10px;
+        border-left: 0;
+    }
+    
+    table tr>th:nth-child(2) {
+        width: 53px;
+    }
+    
+    table tr>th:nth-child(3) {
+        width: auto;
+    }
+    
+    table tr>th:nth-child(4) {
+        width: 85px;
+    }
+    
+    table tr>th:nth-child(5) {
+        width: 95px;
+        border-right: 0;
+    }
+    /*推荐幻灯*/
+    
+    .onfocuscss {
+        font-size: 10px;
+        float: right;
+        border-radius: 2px;
+        position: relative;
+        top: 3px;
+        color: #fff;
+        background: #9C27B0;
+        padding: 0 1px;
+        cursor: default;
+    }
+    /*查看新闻分类nav*/
+    .panel-heading {
+        position: relative;
+    }
+    .panel-title{
+        cursor: pointer;
+    }
+    .panel-title:hover{
+        color: #000;
+    }
+    .panel-heading ul {
+        position: absolute;
+        top: 0px;
+        left: 70px;
+        font-size: 0;
+    }
+    
+    .panel-heading li {
+        list-style: none;
+        display: inline-block;
+        color: #333;
+        padding: 9px 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    .panel-heading li:hover {
+        background: #333;
+        color: #fff;
+    }

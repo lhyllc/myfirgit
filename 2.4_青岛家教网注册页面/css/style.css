@@ -1,0 +1,182 @@
+body {
+    padding: 0px;
+    margin: 20px 0px;
+    background-color: #45818e;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+
+a:link,a:visited {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.warpper {
+    width: 900px;
+    overflow: hidden;
+    ;
+    margin: 0px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+
+/****** header *********************************/
+
+header {
+    height: 100px;
+    overflow: hidden;
+    text-align: right;
+}
+
+header img {
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+header span {
+    float: right;
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+header span a {
+    margin-right: 10px;
+}
+
+
+/****** content *********************************/
+
+.content {
+    width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.des {
+    padding: 10px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #666;
+    text-indent: 2em;
+}
+
+table {
+    width: 850px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+tr,
+td {
+    height: 35px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+table td input {
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+
+table td select {
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+
+table td textarea {
+    width: 98%;
+    height: 60px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.ttile {
+    background-color: #eee;
+    color: blue;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.wid210 {
+    width: 180px;
+}
+
+.red {
+    color: red;
+}
+
+.tright {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.help {
+    font-size: 12px;
+    color: #5CACEE;
+}
+
+.checkbox label {
+    width: 140px;
+    height: 30px;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 30px;
+    float: left;
+    margin-right: 15px;
+}
+
+.checkbox label input {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 3px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    margin: 10px 0px;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    margin: 15px;
+    font-family: "microsoft yahei";
+}
+
+
+/****** footer **********************************/
+
+footer {
+    margin-bottom: 20px;
+}
+
+footer p {
+    text-align: center;
+}

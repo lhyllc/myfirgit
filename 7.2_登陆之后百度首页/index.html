@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆后的百度首页</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/baidu.css">
+</head>
+<body>
+
+	<!-- 换肤 -->
+	<div class="skin-container" id="skin-container">
+		<div class="skin-wrapper">
+			<div class="skin-title-wrapper">
+				<div class="skin-title">
+					<li class="action">热门</li>
+					<li>游戏</li>
+					<li>卡通</li>
+					<li>女神降临</li>
+					<li>明星</li>
+					<li>风景</li>
+					<li>简约</li>
+					<li>小清新</li>
+					<span id="shouqi"><em></em>收起</span>
+					<span id="normal"><em></em>不使用换肤</span>
+				</div>
+			</div>
+			<div class="skin-con">
+				<div class="skin-img-list" id="skin-img-list">
+					<li class="skin-img-item pos-0 big-img-item">
+						<img src="./images/skin/sm0.jpg" alt="sm-00" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:魔威映画</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-1">
+						<img src="./images/skin/sm1.jpg" alt="sm-01" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:亚洲星光娱乐</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-2">
+						<img src="./images/skin/sm2.jpg" alt="sm-02" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:周冬雨工作室</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-3">
+						<img src="./images/skin/sm3.jpg" alt="sm-03" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:爱奇艺影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-4">
+						<img src="./images/skin/sm4.jpg" alt="sm-04" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:爱奇艺影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-5">
+						<img src="./images/skin/sm5.jpg" alt="sm-05" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:优酷</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-6">
+						<img src="./images/skin/sm6.jpg" alt="sm-06" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:基美影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-7">
+						<img src="./images/skin/sm7.jpg" alt="sm-07" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:基美影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-8 big-img-item">
+						<img src="./images/skin/sm8.jpg" alt="sm-08" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:环球影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-9">
+						<img src="./images/skin/sm9.jpg" alt="sm-09" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:环球影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-10">
+						<img src="./images/skin/sm10.jpg" alt="sm-010" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:派拉蒙影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+					<li class="skin-img-item pos-11">
+						<img src="./images/skin/sm11.jpg" alt="sm-011" class="skin-img-item-img">
+						<div class="skin-img-shadow"></div>
+						<p class="skin-img-item-writer">摄影:派拉蒙影业</p>
+						<div class="skin-img-item-choose"></div>
+					</li>
+				</div>
+				<div class="preview-view">
+					<div class="view-up"></div>
+					<div class="view-down">
+						<img src="./images/skin/sm0.jpg" alt="" id="down-img">
+					</div>
+					<p>背景皮肤效果预览</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end 换肤 -->
+	<!-- 页面头部 -->
+	<header>
+		<!-- 左侧 -->
+		<div class="hdtool left clearfix">
+			<div class="weather left" id="weather">
+				<span id="w-city">加载天气</span>
+				<span id="w-icon"></span>
+				<span id="w-temp">…</span>
+				<span id="w-weather">…</span>
+				<span id="w-wind">…</span>
+				<span id="w-aqi-level" class="fontbold"></span>
+				<span id="w-aqi">…</span>
+				<!-- 天气隐藏内容 -->
+				<div class="weather-setting-wrapper" id="weather-setting-wrapper">
+					<span class="arrow"><em></em></span>
+					<div class="weather-setting-title">
+						<span>今天是：周四 02月23日</span><a href="#">未来7天天气</a>
+					</div>
+					<div class="weather-setting-content clearfix" id="weather-setting-content">
+						
+					</div>
+				</div>
+				<!-- end 天气隐藏内容 -->
+			</div>
+			
+			<div class="tool left">
+				<a href="#">宝箱</a>
+				<a href="#" id="changeskin">换肤</a>
+				<a href="#">消息</a>
+				<a href="#" class="showchannel" id="showchannel">显示频道</a>
+			</div>
+		</div>
+		<!-- 右侧 -->
+		<div class="hdnav right">
+			<a href="#" class="fontbold">糯米</a>
+			<a href="#" class="fontbold">新闻</a>
+			<a href="#" class="fontbold">hao123</a>
+			<a href="#" class="fontbold">地图</a>
+			<a href="#" class="fontbold">视频</a>
+			<a href="#" class="fontbold">贴吧</a>
+			<a href="#" id="member">百度会员</a>
+			<a href="#" id="seting">设置</a>
+			<a href="#" class="more" id="morepro">更多产品</a>
+			<!-- 会员信息隐藏内容 -->
+			<div class="memberbox none" id="memberbox">
+				<span class="arrow"><em></em></span>
+				<a href="#">我的VIP</a>
+				<a href="#">个人中心</a>
+				<a href="#">账号设置</a>
+				<a href="#">意见反馈</a>
+				<a href="#">退出</a>
+			</div>
+			<!-- end 会员信息隐藏内容 -->
+			<!-- 设置隐藏内容 -->
+			<div class="setingbox none" id="setingbox">
+				<span class="arrow"><em></em></span>
+				<a href="#">搜索设置</a>
+				<a href="#">高级搜索</a>
+				<a href="#">搜索历史</a>
+				<a href="#">意见反馈</a>
+			</div>
+			<!-- end 设置隐藏内容 -->
+			<!-- 百度更多产品隐藏内容 -->
+			<div class="morebox none" id="moreprobox">
+				<div class="moretitle">更多产品</div>
+				<ul class="morelist">
+					<a href="#"><img src="./images/music.png" alt="音乐">音乐</a>
+					<a href="#"><img src="./images/tu.png" alt="图片">图片</a>
+					<a href="#"><img src="./images/zhidao.png" alt="知道">知道</a>
+					<a href="#"><img src="./images/wenku.png" alt="文库">文库</a>
+					<a href="#"><img src="./images/bang.png" alt="风云榜">风云榜</a>
+					<a href="#"><img src="./images/tuiguang.png" alt="百度推广">百度推广</a>
+				</ul>
+				<div class="allpro"><a href="#">全部产品&gt;&gt;</a></div>
+			</div>
+			<!-- end 百度更多产品隐藏内容 -->
+		</div>
+	</header>
+	<!-- end 页面头部 -->
+	<!-- 搜索区 -->
+	<div class="s-form">
+		<div class="form-wrapper">
+			<div class="logo">
+				<img id="lg-img" src="" width="270" height="129" >
+			</div>
+			<form action="https://www.baidu.com/s">
+				<span></span>
+				<input id="ipt" type="text" name="wd" class="ipt" placeholder="请输入关键字">
+				<button type="submit" id="mainbtn">百度一下</button>
+			</form>
+		</div>
+	</div>
+	<div class="s-down none" id="s-down">
+		<div class="s-down-wrapper">
+			<a href="#" class="result_logo none" id="top_logo">
+				<img src="./images/logo_top.png" alt="到百度首页" title="到百度首页" width="101">
+			</a>
+			<div class="form-wrapper">
+				<form action="https://www.baidu.com/s">
+					<span></span>
+					<input type="text" name="wd" class="ipt" placeholder="请输入关键字">
+					<button type="submit">百度一下</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- end 搜索区 -->
+	<!-- 内容区域 -->
+	<div id="container">
+		<div class="main clearfix" id="maincon">
+			<ul class="tabnav-tit clearfix" id="tabtitle">
+				<li id="tit00" class="tit00"><em></em>我的关注</li>
+				<li id="tit01">推荐</li>
+				<li id="tit02">导航</li>
+				<li id="tit03">视频</li>
+				<!-- <li id="tit04">购物</li> -->
+				<span id="hidechannel">隐藏频道</span>
+			</ul>
+			<!-- 我的关注内容部分 -->
+			<div class="tabnav-con" id="con00">
+				<div class="con-wrapper">
+					<div class="wddh-title" id="wddh-title">
+						<em></em>
+						<span>我的导航</span>
+					</div>
+					<div class="wddh-con" id="wddh-con">
+						<a href="#"><img src="./images/gz01.png" alt="1">百度贴吧</a>
+						<a href="#"><img src="./images/gz02.png" alt="2">淘宝网</a>
+						<a href="#"><img src="./images/gz03.png" alt="3">新浪微博</a>
+						<a href="#"><img src="./images/gz04.png" alt="4">优酷网</a>
+						<a href="#"><img src="./images/gz05.png" alt="5">hao123</a>
+						<a href="#"><img src="./images/gz06.png" alt="6">京东商城</a>
+						<a href="#"><img src="./images/gz07.png" alt="7">世纪东方</a>
+						<a href="#"><img src="./images/gz08.png" alt="8">Discuz!应用中心</a>
+						<a href="#"><img src="./images/gz09.png" alt="9">汽车之家</a>
+						<a href="#"><img src="./images/gz10.png" alt="10">同仁社区</a>
+
+						<a href="#"><img src="./images/gz01.png" alt="1">百度贴吧</a>
+						<a href="#"><img src="./images/gz02.png" alt="2">淘宝网</a>
+						<a href="#"><img src="./images/gz03.png" alt="3">新浪微博</a>
+						<a href="#"><img src="./images/gz04.png" alt="4">优酷网</a>
+						<a href="#"><img src="./images/gz05.png" alt="5">hao123</a>
+						<a href="#"><img src="./images/gz06.png" alt="6">京东商城</a>
+						<a href="#"><img src="./images/gz07.png" alt="7">世纪东方</a>
+						<a href="#"><img src="./images/gz08.png" alt="8">Discuz!应用中心</a>
+						<a href="#"><img src="./images/gz09.png" alt="9">汽车之家</a>
+						<a href="#"><img src="./images/gz10.png" alt="10">同仁社区</a>
+					</div>
+				</div>
+			</div>
+			<!-- 推荐内容部分 -->
+			<div class="tabnav-con" id="con01">
+				<div class="con-wrapper">
+					<div class="news-list-wrapper">
+						<li class="clearfix">
+							<img src="./images/list01.jpeg" alt="">
+							<h2><a href="#">韩进行总统弹劾案第16次庭审辩论 将敲定终审日期</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li class="clearfix">
+							<img src="./images/list02.jpeg" alt="">
+							<h2><a href="#">利比亚海岸发现74具遗体 生前或试图偷渡意大利</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">红十字会法提交三审：未向捐赠人反馈将被追刑责</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">美媒：金正恩或首次派代表团赴美进行非正式会谈</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li class="clearfix">
+							<img src="./images/list01.jpeg" alt="">
+							<h2><a href="#">韩进行总统弹劾案第16次庭审辩论 将敲定终审日期</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li class="clearfix">
+							<img src="./images/list02.jpeg" alt="">
+							<h2><a href="#">利比亚海岸发现74具遗体 生前或试图偷渡意大利</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">红十字会法提交三审：未向捐赠人反馈将被追刑责</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">美媒：金正恩或首次派代表团赴美进行非正式会谈</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li class="clearfix">
+							<img src="./images/list01.jpeg" alt="">
+							<h2><a href="#">韩进行总统弹劾案第16次庭审辩论 将敲定终审日期</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li class="clearfix">
+							<img src="./images/list02.jpeg" alt="">
+							<h2><a href="#">利比亚海岸发现74具遗体 生前或试图偷渡意大利</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">红十字会法提交三审：未向捐赠人反馈将被追刑责</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+						<li>
+							<h2><a href="#">美媒：金正恩或首次派代表团赴美进行非正式会谈</a></h2>
+							<p><span>搜狐新闻</span><span>02-20</span><span>16:18</span><span class="hot-point">热点</span></p>
+						</li>
+					</div>
+					<div class="news-rank-wrapper" id="news-rank-wrapper">
+						<div class="ranktitle">
+							<h3>实时热点</h3>
+							<a id="hyh">换一换</a>
+						</div>
+						<div id="rank">
+							<div class="rankcon none">
+								<a href="#">伪造号牌怼交警</a>
+								<a href="#">韩校长为新生洗脚</a>
+								<a href="#">王宝强再谈离婚</a>
+								<a href="#">汪峰青涩旧照曝光</a>
+								<a href="#">醉驾男找交警聊天</a>
+								<a href="#">小伙给爷爷拍写真</a>
+								<a href="#">中国彩礼地图出炉</a>
+								<a href="#">花3万美容变毁容</a>
+								<a href="#">雷峰塔变金银岛</a>
+								<a href="#">跨越24年父女照</a>
+								<a href="#">冠军之女患癌筹款</a>
+								<a href="#">装修工坠楼身亡</a>
+								<a href="#">叶祖新被曝恋情</a>
+								<a href="#">曝王俊凯通过复试</a>
+								<a href="#">砍人嫌犯母亲道歉</a>
+								<a href="#">周冬雨亮相时装周</a>
+							</div>
+							<div class="rankcon none">
+								<a href="#">学生寝室自缢身亡</a>
+								<a href="#">大庆杀母女子被抓</a>
+								<a href="#">南京小学弹性离校</a>
+								<a href="#">地铁现借小钱诈骗</a>
+								<a href="#">保姆偷18万钻戒</a>
+								<a href="#">女子租直升机行骗</a>
+								<a href="#">男子偷盗爱心物品</a>
+								<a href="#">订婚收288万聘金</a>
+								<a href="#">辽宁民爆公司爆炸</a>
+								<a href="#">乐天被曝让地萨德</a>
+								<a href="#">救护车上被索红包</a>
+								<a href="#">女子坐文物拍照</a>
+								<a href="#">拿公职向情妇表忠</a>
+								<a href="#">日本千名师生中毒</a>
+								<a href="#">饿了么3餐厅被查</a>
+								<a href="#">31省市区GDP</a>
+							</div>
+							<div class="rankcon none">
+								<a href="#">被疑偷车贼遭暴打</a>
+								<a href="#">女孩闹市被撞垂危</a>
+								<a href="#">三男子抢劫彩票店</a>
+								<a href="#">农户家中惊现圣旨</a>
+								<a href="#">舒淇自嘲虎背熊腰</a>
+								<a href="#">网友曝光行业秘密</a>
+								<a href="#">女孩被父亲拴坟场</a>
+								<a href="#">韩校长为新生洗脚</a>
+								<a href="#">王宝强再谈离婚</a>
+								<a href="#">醉驾男找交警聊天</a>
+								<a href="#">小伙给爷爷拍写真</a>
+								<a href="#">澳飞机撞击商场</a>
+								<a href="#">中国彩礼地图出炉</a>
+								<a href="#">叶祖新被曝恋情</a>
+								<a href="#">花3万美容变毁容</a>
+								<a href="#">曝王俊凯通过复试</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<!-- 导航内容部分 -->
+			<div class="tabnav-con" id="con02">
+				<div class="con-wrapper">
+					<h3 class="daohangtit">猜你喜欢</h3>
+					<div class="daohanglist">
+						<a href="#"><img src="./images/nuomi.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz02.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz04.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz05.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz06.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz07.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz08.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz09.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz10.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz02.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/nuomi.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz04.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz05.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz07.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz06.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz09.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz08.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz10.png" alt="">百度糯米</img></a>
+					</div>
+					<h3 class="daohangtit">资讯信息</h3>
+					<div class="daohanglist">
+						<a href="#"><img src="./images/nuomi.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz02.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz04.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz05.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz06.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz07.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz08.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz09.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz10.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz02.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/nuomi.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz04.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz05.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz07.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz06.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz09.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz08.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz01.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz03.png" alt="">百度糯米</img></a>
+						<a href="#"><img src="./images/gz10.png" alt="">百度糯米</img></a>
+					</div>
+				</div>
+			</div>
+			<!-- 视频内容部分 -->
+			<div class="tabnav-con" id="con03">	
+				<div class="con-wrapper">
+					<div class="shipin clearfix">
+						<li class="lager">
+							<div class="img"><img src="./images/lager1.jpg" alt=""><span>30集全</span></div>
+							<p><a href="#">专家:中国将有6艘航母</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:60px"></span></span>
+								<span>7.0</span>
+							</div>
+						</li>
+						<li class="lager">
+							<div class="img"><img src="./images/lager2.jpg" alt=""><span>20集全</span></div>
+							<p><a href="#">秀恩爱死得快之朋</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:55.5px"></span></span>
+								<span>9.2</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp01.jpg" alt=""><span>04:47</span></div>
+							<p><a href="#">专家:中国将有6艘航母 统一台湾十拿九稳</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp02.jpg" alt=""><span>01:10</span></div>
+							<p><a href="#">全球武器交易创新高，中东亚太需求旺</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<div class="hr left"></div>
+						<li>
+							<div class="img"><img src="./images/sp01.jpg" alt=""><span>04:47</span></div>
+							<p><a href="#">专家:中国将有6艘航母 统一台湾十拿九稳</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp02.jpg" alt=""><span>01:10</span></div>
+							<p><a href="#">全球武器交易创新高，中东亚太需求旺</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li class="lager right">
+							<div class="img"><img src="./images/lager1.jpg" alt=""><span>30集全</span></div>
+							<p><a href="#">专家:中国将有6艘航母</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:60px"></span></span>
+								<span>7.0</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<div class="hr left"></div>
+						<li class="lager">
+							<div class="img"><img src="./images/lager1.jpg" alt=""><span>30集全</span></div>
+							<p><a href="#">专家:中国将有6艘航母</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:60px"></span></span>
+								<span>7.0</span>
+							</div>
+						</li>
+						<li class="lager">
+							<div class="img"><img src="./images/lager2.jpg" alt=""><span>20集全</span></div>
+							<p><a href="#">秀恩爱死得快之朋</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:55.5px"></span></span>
+								<span>9.2</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp01.jpg" alt=""><span>04:47</span></div>
+							<p><a href="#">专家:中国将有6艘航母 统一台湾十拿九稳</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp02.jpg" alt=""><span>01:10</span></div>
+							<p><a href="#">全球武器交易创新高，中东亚太需求旺</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<div class="hr left"></div>
+						<li>
+							<div class="img"><img src="./images/sp01.jpg" alt=""><span>04:47</span></div>
+							<p><a href="#">专家:中国将有6艘航母 统一台湾十拿九稳</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp02.jpg" alt=""><span>01:10</span></div>
+							<p><a href="#">全球武器交易创新高，中东亚太需求旺</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li class="lager right">
+							<div class="img"><img src="./images/lager1.jpg" alt=""><span>30集全</span></div>
+							<p><a href="#">专家:中国将有6艘航母</a></p>
+							<div class="spft">
+								<span class="score-star"><span class="star-active" style="width:60px"></span></span>
+								<span>7.0</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp03.jpg" alt=""><span>05:50</span></div>
+							<p><a href="#">【新车翔评】2017年最值得期待的suv盘点</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+						<li>
+							<div class="img"><img src="./images/sp04.jpg" alt=""><span>09:31</span></div>
+							<p><a href="#">秀恩爱死得快之朋友圈的诅咒</a></p>
+							<div><img src="" alt=""><span></span></div>
+						</li>
+					</div>
+				</div>
+			</div>
+			<!-- 购物内容部分 -->
+			<!-- <div class="tabnav-con" id="con04">
+				<div class="con-wrapper">购物</div>
+			</div> -->
+			<!-- 体育内容部分 -->
+			<!-- <div class="tabnav-con" id="con05">
+				<div class="con-wrapper">体育</div>
+			</div> -->
+			<!-- 小说内容部分 -->
+			<!-- <div class="tabnav-con" id="con06">
+				<div class="con-wrapper">小说</div>
+			</div> -->
+			<!-- 回到顶部 -->
+			<div id="top-feed" class="none">
+				<div class="go-top" id="go-top">
+					<span id="gobtn1"></span>
+					<span id="gobtn2">回到顶部</span>
+				</div>
+			</div>
+			<!-- end 回到顶部 -->
+		</div>
+	</div>
+	<!-- end 内容区域 -->
+	<!-- 尾部版权信息 -->
+	<footer id="footer">
+		<p><a href="#">设为首页</a>&nbsp;©2017&nbsp;Baidu&nbsp;<a href="#">使用百度前必读</a>&nbsp;<a href="#">意见反馈</a>&nbsp;京ICP证030173号</p>
+		<p><a href="#">京公网安备11000002000001号</a></p>
+	</footer>
+	<!-- end 尾部版权信息 -->
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

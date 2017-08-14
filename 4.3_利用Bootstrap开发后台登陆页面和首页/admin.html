@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/admin.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- 头部导航 -->
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- 响应式隐藏菜单 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">FrontWeb Panel</a><!-- logo -->
+				</div>
+				<!-- end 响应式隐藏菜单 -->
+				<!-- 导航菜单 -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!-- 左侧菜单 -->
+					<ul class="nav navbar-nav left-nav">
+						<li><a href="#">管理控制台</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品与服务 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- end左侧菜单 -->
+					<!-- 右侧菜单 -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-search"></span> 搜索</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-usd"></span> 费用</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> 工单 <span class="badge">12</span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-bookmark"></span> 备案</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-th"></span> 支持</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> 用户中心</a></li>
+
+					</ul>
+					<!-- end 右侧菜单 -->
+				</div>
+				<!-- end 导航菜单 -->
+			</div>
+		</nav>
+	</header>
+	<!--end头部导航-->
+
+    <!--左侧导航-->
+	<div id="sidebar">
+		<div class="sidebar-head">导航菜单</div>
+		<dl>
+			<dt onclick="onmenu1()">云计算基础服务</dt>
+			<span id="menu1">
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 云服务器 ECS</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 云数据库 RDS</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 负载均衡</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 对象存储 OSS</a></dd>
+			</span>
+		</dl>
+		<dl>
+			<dt onclick="onmenu2()">大数据(数加)</dt>
+			<span id="menu2">
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 数加控制台</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 大数据计算服务</a></dd>
+			</span>
+		</dl>
+		<dl>
+			<dt onclick="onmenu3()">安全(云盾)</dt>
+			<span id="menu3">
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 云盾控制台</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 态势感知</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 服务器安全(安骑士)</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> DDOS防护</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> Web应用防火墙</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 安全管家</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 加密服务</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 绿网</a></dd>
+			</span>
+		</dl>
+		<dl>
+			<dt onclick="onmenu4()">域名与网站(万网)</dt>
+			<span id="menu4">
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 域名</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 云解析 DNS</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 企业邮箱</a></dd>
+			<dd><a href="#"><span class="glyphicon glyphicon-triangle-right"></span> 标准建站</a></dd>
+			</span>
+		</dl>
+	</div>
+	<!--end左侧导航-->
+	<!--右侧主体-->
+	<div id="main">
+		<!-- 通知公告 -->
+		<div class="main-notice">
+			<span>公告:</span>
+			<li><span>[2.6]</span><a href="#">2月9日采云间数据服务升级通知</a></li>
+			<li><span>[2.6]</span><a href="#">2月7日Uniregistry注册局维护通知</a></li>
+			<li><a href="#">更多&gt;&gt;</a></li>
+    	</div>
+    	<!-- 面板测试部分 -->
+        <div id="main-wrapper" class="container-fluid" name="maincon">
+            <h1>Dashboard <small>welcome to FrontWeb</small></h1>
+            <hr>
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="thumbnail">
+					  <img src="./img/001.png" alt="测试图像">
+					  <div class="caption">
+					    <h3>短信服务年度钜惠</h3>
+					    <p>资源包首购8折,<br>最高省550元</p>
+					    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="thumbnail">
+					  <img src="./img/02.png" alt="测试图像">
+					  <div class="caption">
+					    <h3>田丰带你揭秘AI的世界</h3>
+					    <p>【会员日·今日话题】阿里云大学&阿里云研究院&麦子学院出品</p>
+					    <p><a href="#" class="btn btn-info" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="thumbnail">
+					  <img src="./img/03.png" alt="测试图像">
+					  <div class="caption">
+					    <h3>大数据揭秘雾霾形成</h3>
+					    <p>大数据体验馆全新上线，开放免费体验！</p>
+					    <p><a href="#" class="btn btn-success" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="thumbnail">
+					  <img src="./img/02.png" alt="测试图像">
+					  <div class="caption">
+					    <h3>云栖直播</h3>
+					    <p>行业CTO经验分享以及云计算大数据等领域技术干货分享。</p>
+					    <p><a href="#" class="btn btn-warning" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!-- 表格测试部分 -->
+            <h1>Table view</h1>
+            <hr>
+            <div class="row" style="padding:0px 20px;">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    <tr>
+                        <td>1.01</td>
+                        <td>jumo</td>
+                        <td>zhkiou</td>
+                        <td>1OUyang</td>
+                        <td>webseeds</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
+	<!--end右侧主体-->
+   
+
+<!-- 依赖js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function onmenu1() {
+		var a = document.getElementById('menu1');
+		if (a.style.display == "block") {
+			a.style.display = "none";
+		} else {
+			a.style.display = "block";
+		}
+	}
+	function onmenu2() {
+		var a = document.getElementById('menu2');
+		if (a.style.display == "block") {
+			a.style.display = "none";
+		} else {
+			a.style.display = "block";
+		}
+	}
+	function onmenu3() {
+		var a = document.getElementById('menu3');
+		if (a.style.display == "block") {
+			a.style.display = "none";
+		} else {
+			a.style.display = "block";
+		}
+	}
+	function onmenu4() {
+		var a = document.getElementById('menu4');
+		if (a.style.display == "block") {
+			a.style.display = "none";
+		} else {
+			a.style.display = "block";
+		}
+	}
+</script>
+</body>
+</html>

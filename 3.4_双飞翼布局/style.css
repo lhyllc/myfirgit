@@ -1,0 +1,127 @@
+/*全局样式*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style-type: none;
+}
+body{
+	font:14px arial;
+	color: #333;
+	background-color: #fff;
+	min-width: 660px;
+}
+/*头部*/
+header{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background-color: #eee;
+	padding-left: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+/*end 头部*/
+/*主体部分*/
+.main{
+	width: 100%;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.main:after{
+	display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+/*双飞翼布局关键部分*/
+.col-main,.col-sub,.col-extra{
+	float: left;
+}
+.col-main{
+	width: 100%;
+}
+.col-sub{
+	width: 200px;
+	margin-left: -100%;
+	background-color: #eee;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.col-extra{
+	width:300px;
+	margin-left: -300px;
+	background-color: #eee;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+/*双飞翼与圣杯布局的区别*/
+.main-wrap{ 
+	margin-left: 210px;
+	margin-right: 310px;
+	background-color: #eee;
+	padding: 20px;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.main-wrap p{
+	line-height: 25px;
+	text-indent: 2em;
+	margin: 10px 0px; 
+}
+/* end 双飞翼布局关键部分*/
+/*子列*/
+.col-sub h4{
+	padding: 10px;
+	line-height: 20px; 	
+}
+.col-sub .menu{
+	width: 200px;
+	padding: 0 0 20px 0;
+}
+.col-sub .menu li{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.col-sub .menu li:nth-child(12){
+	border-bottom: 0px;
+}
+.col-sub .menu li:hover{
+	background-color: #ddd;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer; 	
+}
+/* end 子列*/
+
+/*扩展列*/
+.col-extra ul{
+	margin: 20px;
+}
+.col-extra ul li{
+	font-size: 12px;
+	margin: 5px 0px 10px;
+	padding-bottom: 10px;
+	border-bottom:1px dotted #333;
+}
+.col-extra ul li:nth-child(12){
+	border-bottom:0px;
+}
+/* end 扩展列*/
+
+/*尾部*/
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #eee;
+	text-align: center;
+	line-height: 100px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+/*end 尾部*/

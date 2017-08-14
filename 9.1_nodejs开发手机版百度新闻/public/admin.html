@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>百度新闻后台管理</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">百度新闻管理后台</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- nav end -->
+        <div class="row">
+            <!-- 添加新闻区域 -->
+            <div class="col-md-5 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">添加新闻</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="newstitle" class="col-sm-2 control-label">新闻标题</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="newstitle" placeholder="新闻标题" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newstype" class="col-sm-2 control-label">新闻类型</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="newstype">
+                                        <option>推荐</option>
+                                        <option>百家</option>
+                                        <option>本地</option>
+                                        <option>图片</option>
+                                        <option>娱乐</option>
+                                        <option>社会</option>
+                                        <option>军事</option>
+                                        <option>互联网</option>
+                                        <option>科技</option>
+                                        <option>搞笑</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg" class="col-sm-2 control-label">新闻图片</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="newsimg" placeholder="图片地址" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newstime" class="col-sm-2 control-label">添加时间</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" id="newstime">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newssrc" class="col-sm-2 control-label">新闻来源</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="newssrc" placeholder="新闻来源" required="required"">
+                                </div>
+                            </div>
+							<div class="form-group">
+							    <div class="col-sm-offset-2 col-sm-10">
+							        <div class="checkbox">
+							            <label>
+							                <input type="checkbox" id="onfocus">推荐到幻灯
+							            </label>
+							        </div>
+							    </div>
+							</div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-2 col-sm-10 ">
+                                    <button type="submit" class="btn btn-primary" id="submit">提交内容</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 添加新闻区域 end -->
+            <!-- 新闻列表 -->
+            <div class="col-md-7 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="panel-heading">
+                        <h4 class="panel-title" onclick="refreshNews('')">新闻列表</h4>
+                        <ul>
+                            <li>推荐</li>
+                            <li>百家</li>
+                            <li>本地</li>
+                            <li>图片</li>
+                            <li>娱乐</li>
+                            <li>社会</li>
+                            <li>军事</li>
+                            <li>互联网</li>
+                            <li>科技</li>
+                            <li>搞笑</li>
+                        </ul>
+                    </div>
+                    <div class="panel-body" style="padding: 0;">
+                        <table class="table table-bordered table-striped table-hover" id="newstable" style="border:0; ">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>类型</th>
+                                    <th>新闻标题</th>
+                                    <th>添加时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+								<!-- 从服务端获取数据 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- 新闻列表 end-->
+        </div>
+    </div>
+
+
+    <!-- 修改信息modal end -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="updateModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="upnewstitle" class="col-sm-2 control-label">新闻标题</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="upnewstitle" placeholder="新闻标题" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="upnewstype" class="col-sm-2 control-label">新闻类型</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="upnewstype">
+                                    <option>推荐</option>
+                                    <option>百家</option>
+                                    <option>本地</option>
+                                    <option>图片</option>
+                                    <option>娱乐</option>
+                                    <option>社会</option>
+                                    <option>军事</option>
+                                    <option>互联网</option>
+                                    <option>科技</option>
+                                    <option>搞笑</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="upnewsimg" class="col-sm-2 control-label">新闻图片</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="upnewsimg" placeholder="新闻图片" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="upnewstime" class="col-sm-2 control-label">添加时间</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="upnewstime">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="upnewssrc" class="col-sm-2 control-label">新闻来源</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="upnewssrc" placeholder="新闻来源" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+    					    <div class="col-sm-offset-2 col-sm-10">
+    					        <div class="checkbox">
+    					            <label>
+    					                <input type="checkbox" id="uponfocus">推荐到幻灯
+    					            </label>
+    					        </div>
+    					    </div>
+    					</div>
+                    </form>
+                </div>
+    			<div class="modal-footer">
+    			    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    			    <button type="button" class="btn btn-primary">更新内容</button>
+    			</div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改信息modal end -->
+    <!-- 删除信息modal end -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="deleteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">提示信息</h4>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">确认</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 删除信息modal end -->
+    <!-- 消息提示modal end -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messageModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">提示信息</h4>
+          </div>
+          <div class="modal-body">
+            <p id="modalContent"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">确认</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 消息提示modal end -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

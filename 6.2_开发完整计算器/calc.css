@@ -1,0 +1,116 @@
+/* reset*/
+*{
+	padding:0;
+	margin:0;
+	font: 14px arial;
+}
+body{
+	background: #fff;
+}
+/*外部容器*/
+.view{
+	width: 350px;
+	margin: 20px auto;
+	background: #009688;
+    border: 1px solid #607D8B;
+	padding: 15px 5px;
+	position: relative;
+}
+/*计算器标题*/
+.header{
+	margin:5px;
+}
+
+/*显示屏幕*/
+.screen{
+	background: #172f3b;
+	border: 1px solid #bfbfbf;
+	box-sizing: border-box;
+	height: 80px;
+	padding: 15px;
+    font-size: 30px;
+    line-height: 32px;
+    overflow: hidden;
+    color: #fff;
+    text-align: right;
+	word-break:break-all; 
+	border-radius: 6px;
+	margin:10px 0;
+}
+.screen>em{
+	padding: 10px;
+}
+/*end显示屏幕*/
+
+/*警告提示信息样式*/
+#msg{
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	text-align:right;
+	color: #fff;
+	padding: 0 10px;
+	position: absolute;
+	top: 105px;
+    right: 5px;
+}
+/*按钮块样式*/
+.numbox{
+	font-size:0;
+}
+button{
+	width: 60px;
+	height: 30px;
+	margin:5px;
+	display: inline-block;
+	cursor: pointer;
+	outline: 0;	
+	border: 1px solid #ddd;
+	background: #fafafa;
+	border-radius: 5px;
+}
+button:hover{
+	background: #ccc;
+}
+/*end按钮块样式*/
+
+/*历史记录显示样式*/
+#historywrapper{
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	width: 280px;
+	height: 342px;
+	margin-left: -473px;
+	background: #fafafa;
+    border: 1px solid #ccc;
+	padding:5px;
+}
+#historywrapper>h3{
+    height: 22px;
+    font-weight: 700px;
+    padding-bottom: 10px;
+}
+#historywrapper>h3>span{
+	float: right;
+	cursor: pointer;
+}
+#history{
+	width: 100%;
+	height: 90%;
+	overflow-y: auto;
+}
+#history>p{
+	width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    border-bottom: 1px dotted #ccc;
+}
+#history>p>em{
+	padding: 10px;
+}
+/*end历史记录显示样式*/

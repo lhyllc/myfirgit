@@ -1,0 +1,77 @@
+/* reset*/
+*{
+	padding:0;
+	margin:0;
+	font: 14px arial;
+}
+/*外部容器*/
+.view{
+	width: 280px;
+	/*height: 260px;*/
+	margin: 20px auto;
+	background: #fafafa;
+	border:1px solid #eee;
+	padding: 15px 5px;
+}
+/*计算器标题*/
+.header{
+	margin:5px;
+}
+.numbox{
+	font-size:0;
+}
+/*整个显示屏*/
+.showscreen{
+	background: #607d8b;
+	border: 1px solid #b3b4b5;
+	box-sizing: border-box;
+}
+/*结果显示框*/
+[type=text]{
+	font-size: 25px;
+	width: 278px;
+	height: 50px;
+	line-height: 28px;
+	background: #607d8b;
+	color: #fff;
+	border: 0px; 
+	text-align: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+/*计算器按钮*/
+[type=button]{
+	width: 60px;
+	height: 30px;
+	margin:5px;
+	display: inline-block;
+	cursor: pointer;
+	outline: 0;		
+}
+.wid130{
+	width: 130px;
+}
+/*错误提示*/
+#error{
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	text-align:right;
+	color: #ff0000;
+	padding: 0 10px;
+}
+/*x,y,ysf辅助显示框*/
+.hidden{
+	width: 46%;
+	padding-left: 0px;
+	padding-right: 0px;
+	float: left;
+}
+.hidden:nth-child(2){
+	width: 22px;
+	text-align: center;
+}
+.hidden:nth-child(3){
+	text-align: left;
+}

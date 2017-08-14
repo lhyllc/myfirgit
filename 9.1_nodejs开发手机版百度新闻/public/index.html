@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>百度新闻首页</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/baidunews.css">
+</head>
+
+<body>
+	<div class="container-fluild">
+		<!-- 顶部 -->
+		<header class="cf">
+			<a href=""><i class="iconfont icon-baidu"></i></a>
+			<a href=""><i class="iconfont icon-yonghu"></i></a>
+			<a href=""><i class="iconfont icon-gengduo2"></i></a>
+			<a href=""><i class="iconfont icon-sousuo"></i></a>
+		</header>
+		<!-- 顶部 end -->
+		<!-- 导航 -->
+		<nav>
+			<ul>
+				<li><a href="#">推荐</a><i></i></li>
+				<li><a href="#">百家</a><i></i></li>
+				<li><a href="#">本地</a><i></i></li>
+				<li><a href="#">图片</a><i></i></li>
+				<li><a href="#">娱乐</a><i></i></li>
+				<li><a href="#">社会</a></li>
+				<li><a href="#">军事</a><i></i></li>
+				<li class="dbwid"><a href="#">互联网</a><i></i></li>
+				<li><a href="#">科技</a><i></i></li>
+				<li><a href="#">搞笑</a><i></i></li>
+				<li><a href="#">更多<span class="iconfont icon-gengduo-copy white"></span></a></li>
+			</ul>
+		</nav>
+		<!-- 导航 end -->
+		<!-- 幻灯片 -->
+		<div id="carousel-example-generic" class="focus carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox" id="carousel-inner">
+		    
+		    <!-- focus内容由js推送 -->
+		  </div>
+		</div>
+		<!-- 幻灯片 end -->
+		<!-- 列表内容 -->
+		<article>
+			<ul class="news-lists" id="news-lists">
+				<!-- 这部分内容由js推送 -->
+			</ul>
+		</article>
+		<!-- 列表内容 end -->
+	</div>
+	<!-- 返回顶部 -->
+	<div class="go-top">
+		<i class="iconfont icon-fanhuidingbu"></i>
+	</div>
+	<!-- 返回顶部 end-->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/news.js"></script>
+</body>
+</html>

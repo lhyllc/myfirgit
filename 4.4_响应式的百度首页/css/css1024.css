@@ -1,0 +1,281 @@
+body {
+    background-color: #fafafa;
+    font-size: 14px;
+    font-family: arial,"微软雅黑";
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    min-width: 750px;
+
+}
+
+body,ul,li,p,img,a{
+	padding: 0;
+    margin: 0;
+}
+
+
+a {
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+/*控制不同分别率显示的区域*/
+#wrapper,#respond767{
+	display: none;
+}
+#respond1024{
+  display: block;
+}
+/*头部菜单区域*/
+header{
+	position: relative;
+	font-size: 16px;
+    color: #505050;
+    height: 50px;
+    line-height: 30px;
+}
+header>.menu{
+	width: 100%;
+	height: 50px;
+    margin-right: 6px;
+}
+header>.menu>li{
+	width: 50px;
+    height: 30px;
+    margin: 10px 5px 10px;
+	background: url(../images/icon_menu.png) no-repeat;
+	background-size: 200px auto;
+	float: right;
+	cursor: pointer;
+}
+header>.menu>li:nth-child(1){
+	background-position: -100px -4px;
+}
+header>.menu>li:nth-child(1):hover{
+	background-position: -150px -4px;
+}
+header>.menu>li:nth-child(1):hover .menubox{
+	display: block;
+}
+header>.menu>li:nth-child(2){
+	background-position: -50px -4px;
+}
+header>.menu>li:nth-child(3){
+	background-position: 0px -4px;
+}
+/*右侧隐藏菜单*/
+header>.menu>li>.menubox{
+	width: 56px;
+	height: 100%;
+	background: #eee;
+    border-left: 1px solid #dfdfdf;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	overflow: hidden;
+	z-index: 10;
+}
+/*隐藏菜单标题*/
+header>.menu .title{
+	width: 50px;
+    height: 30px;
+    margin: 10px 5px 10px 2px;
+	background: url(../images/icon_menu.png) no-repeat;
+	background-size: 200px auto;
+	background-position: -150px -4px;
+	float: right;
+	cursor: pointer;
+}
+/*隐藏菜单列表*/
+header .menu-list{
+	width: 56px;
+	height: 100%;
+	overflow-y: auto;
+}
+header .menu-list li{
+	float: left;
+	width: 100%;
+    text-align: center;
+    padding: 20px 0 14px;
+}
+header .menu-list li img{
+	width: 28px;
+	height: 28px;
+	margin-bottom: -10px;
+}
+header .menu-list li p{
+	height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #838383;
+}
+/*end头部菜单区域*/
+/*logo图标*/
+.logo{
+	margin: 85px auto 0;
+	text-align: center;
+	width: 220px;
+    height: 71px;
+}
+/*endlogo图标*/
+/*搜索条区域*/
+.search{
+	position: relative;
+	width: 620px;
+    z-index: 3;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid #38f;
+    background: #fff;
+    -webkit-transition: width .3s linear;
+    transition: width .3s linear;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+}
+/*input样式*/
+.search .wd{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 80%;
+    height: 100%;
+    font-size: 20px;
+    color: black;
+    padding: 11px;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+}
+.search .s-submit{
+	display: none;
+}
+.search .s-search-btns {
+    width: 116px;
+    height: 100%;
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.search .s-search-btns .btn {
+    display: inline-block;
+    height: 45px;
+    width: 57px;
+}
+.search .s-search-btns .line { /*竖线*/
+    height: 37px;
+    width: 0;
+    border-left: 1px solid #e6e6e6;
+    position: absolute;
+    top: 4px;
+    left: 45px;
+}
+.search .s-search-btns .speaker{/*话筒*/
+	width: 21px;
+	height: 31px;
+    margin-left: -3px;
+    margin-top: -2px;
+    background: url(../images/sbtn1.png) no-repeat;
+    background-size: 21px 31px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+.search .s-search-btns .camera{/*相机*/
+	width: 32px;
+	height: 25px;
+    background: url(../images/scamera.png) no-repeat;
+    background-size: 32px 25px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+/*end 搜索条区域*/
+/*导航条*/
+.nav6{
+	width: 630px;
+	height: 54px;
+	margin:85px auto 20px;
+	background-color: #fff;
+	box-shadow: 0px 1px 1px rgba(0,0,0,.2);
+}
+.nav6>nav{
+	width: 85px;
+	padding: 16px 10px;
+	float: left;
+	font-size: 16px;
+	border-right: 1px solid #f0f0f0;
+}
+.nav6>nav:last-child{
+	border-right: 0px;
+	padding: 16px 3px;
+}
+.nav6>nav>a{
+	color: #666;
+}
+.nav6>nav img{
+	width: 16px;
+    height: auto;
+    vertical-align: middle;
+}
+.nav6>nav span{
+	margin-left: 5px;
+}
+/*end 导航条*/
+/*新闻热词样式*/
+.newshot{
+	width: 630px;
+	height: 255px;
+	margin: 0 auto;
+}
+.newshot li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	width: 33.3333333%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	background-color: #fff;
+	border-left: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+}
+.newshot li:first-child{
+	width: 100%;
+}
+.newshot li a{
+	color: #333;
+	font-size: 18px;
+}
+.newshot li span{/*最新新闻标识*/
+	color: #fff;
+	padding: 5px;
+	background-color: #f13f40;
+	margin-left: 10px;
+}
+.downhd{
+	width: 620px;
+	height: 20px;
+	margin: 50px auto 0;
+	text-align: center;
+	font-size: 14px;
+}.downhd>a{
+	color: #00c;
+    text-decoration: underline;
+}
+/*end 新闻热词样式*/
+
+/*尾部*/
+footer {
+    color: #C6C9CD;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    -webkit-user-select: none;
+}

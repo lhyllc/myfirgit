@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/css.css" media="screen and (min-width: 1025px)">
+    <link rel="stylesheet" type="text/css" href="css/css1024.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+    <link rel="stylesheet" type="text/css" href="css/css767.css" media="screen and (max-width: 767px)">
+     <!--[if lt IE 9]>
+      <script src="./js/html5shiv.min.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        function opentianqi() {
+            var a = document.getElementById('hidtianqi');
+            if (a.style.display == "block") {
+                a.style.display = "none";
+                a.style.height = 0;
+            } else {
+                a.style.display = "block";
+                a.style.height = "200px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 屏幕分辨率大于1024 -->
+    <div id="wrapper">
+        <!-- 页面头部 -->
+        <header class="clearfix">
+            <!-- 导航 -->
+            <nav>
+                <ul class="navul">
+                    <li><a href="http://www.nuomi.com/?cid=002540" target="_blank">糯米</a></li>
+                    <li><a href="http://news.baidu.com/" target="_blank">新闻</a></li>
+                    <li><a href="http://www.hao123.com/" target="_blank">hao123</a></li>
+                    <li><a href="http://map.baidu.com/" target="_blank">地图</a></li>
+                    <li><a href="http://v.baidu.com/" target="_blank">视频</a></li>
+                    <li><a href="http://tieba.baidu.com/" target="_blank">贴吧</a></li>
+                    <li><a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" target="_blank">登录</a></li>
+                </ul>
+                <div class="setting">
+                	<u>设置</u>
+                    <!-- 设置菜单隐藏 -->
+                	<div class="settingbox">
+                    	<ul class="settingmenu">
+                    		<li><a href="#1">搜索设置</a></li>
+			                <li><a href="#2">高级搜索</a></li>
+			                <li><a href="#3">关闭预测</a></li>
+			                <li><a href="#4">搜索历史</a></li>
+                    	</ul>
+                	</div>
+                    <!-- end 设置菜单隐藏 -->
+                </div>
+                <div class="moreproducts">
+                	<span>更多产品</span>
+                    <!-- 更多产品隐藏 -->
+                	<div class="moreproductsbox">
+                		<ul class="morelist">
+                            <li class="mtitle">更多产品</li>
+                            <li><a href="http://music.baidu.com/"><span style="width:34px;background-position: -72px 0px;"></span>音乐</a></li>
+                            <li><a href="http://image.baidu.com/"><span style="background-position: -112px 0px;"></span>图片</a></li>
+                            <li><a href="https://zhidao.baidu.com/"><span style="background-position: -36px 0px;"></span>知道</a></li>
+                            <li><a href="http://wenku.baidu.com/"><span style="background-position: -147px 0px;"></span>文库</a></li>
+                            <li><a href="http://top.baidu.com/"><span style="background-position: -184px 0px;"></span>风云榜</a></li>
+                            <li class="mmore"><a href="https://www.baidu.com/more/">全部产品&gt;&gt;</a></li>
+                        </ul>
+                	</div>
+                    <!-- edn 更多产品隐藏 -->
+                </div>
+            </nav>
+            <!-- end 导航 -->
+        </header>
+        <!-- end 页面头部 -->
+        <!-- 搜索主体 -->
+        <div class="main clearfix">
+       		<div class="logo"><img src="images/bd_logo1.png" alt="logo" title="百度一下"></div>
+        	<form action="https://www.baidu.com/s" method="get" target="_blank">
+                <label>
+	                <input type="text" name="wd" placeholder="请输入内容" class="ipt">
+	                <a href="#333"><span class="soubtn"></span></a>
+                </label>
+            	<button type="submit" class="btn">百度一下</button>
+        	</form>
+        </div>
+        <!-- end 搜索主体 -->
+        <!-- 页面尾部 -->
+        <footer>
+	        <div class="qrcode">
+	            <img src="images/zbios_x2_9d645d9.png" alt="手机百度二维码" title="手机百度二维码">
+	            <p>手机百度</p>
+	        </div>
+	        <p>
+	            <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+	            <a href="http://home.baidu.com/" target="_blank">关于百度</a>
+	            <a href="http://ir.baidu.com/" target="_blank">About Baidu</a>
+	            <a href="http://e.baidu.com/?refer=888" target="_blank">百度推广</a>
+	        </p>
+	        <p>
+	            <span>&copy;2017 Baidu </span>
+	            <a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>
+	            <a href="" target="_blank">意见反馈</a>
+	            <span>京ICP证030173号&nbsp;</span>
+	            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号</a>
+	        </p>
+    	</footer>
+        <!-- end 页面尾部 -->
+    </div>
+    <!-- end 屏幕分辨率大于1024 -->
+    <!-- 屏幕分辨率在768~1024 -->
+    <div id="respond1024">
+        <header>
+            <div class="menu">
+                <li>
+                    <div class="menubox">
+                        <p class="title"></p><!-- 更多产品 -->
+                        <ul class="menu-list">
+                            <li><a href="#"><img src="./images/news.png"><p>新闻</p></a></li>
+                            <li><a href="#"><img src="./images/hao123.png"><p>hao123</p></a></li>
+                            <li><a href="#"><img src="./images/map.png"><p>地图</p></a></li>
+                            <li><a href="#"><img src="./images/video.png"><p>视频</p></a></li>
+                            <li><a href="#"><img src="./images/tieba.png"><p>贴吧</p></a></li>
+                            <li><a href="#"><img src="./images/nuomi.png"><p>糯米</p></a></li>
+                            <li><a href="#"><img src="./images/news.png"><p>知道</p></a></li>
+                            <li><a href="#"><img src="./images/music.png"><p>音乐</p></a></li>
+                            <li><a href="#"><img src="./images/photo.png"><p>图片</p></a></li>
+                            <li><a href="#"><img src="./images/book.png"><p>文库</p></a></li>
+                            <li><a href="#"><img src="./images/bang.png"><p>风云榜</p></a></li>
+                            <li><a href="#"><img src="./images/baike.png"><p>百科</p></a></li>
+                            <li><a href="#"><img src="./images/lvyou.png"><p>旅游</p></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li></li>
+                <li></li>
+            </div>
+        </header>
+        <section class="logo">
+            <img src="./images/1024logo.png" alt="百度一下，你就知道" width="220" height="71">
+        </section>
+        <!-- 搜索条 -->
+        <section class="search">
+            <form action="https:www.baidu.com/s" name="f" id="form" class="s-search-form" target="_blank">
+                <input type="hidden" name="rsv_bp" value="0">
+                <input type="hidden" name="ie" value="utf-8">
+                <input type="hidden" name="dsp" value="ipad">
+                <input type="hidden" name="tn" value="SE_baiduhomet2_isv1k3dg">
+                <input type="hidden" name="rsv_idx" value="3">
+                <input type="search" name="wd" class="wd" id="kw" maxlength="100" autocomplete="off" autocorrect="off" autocapitalize="off" data-widget="quickdelete" data-quickdelete-offsetx="0">
+                <div class="s-search-btns">
+                    <div class="speaker btn" >
+                    </div>
+                    <div class="line"></div>
+                    <div class="camera btn" >
+                    </div>
+                </div>
+                <div class="s-submit">
+                    <input type="submit" value="百度一下" id="s_search_submit" class="submit-btn">
+                </div>
+            </form>
+        </section>
+        <!-- 6列导航 -->
+        <section class="nav6">
+            <nav>
+                <a href="#"><img src="./images/nav1.jpg" alt=""><span>淘宝</span></a>
+            </nav>
+            <nav>
+                <a href="#"><img src="./images/nav2.jpg" alt=""><span>爱奇艺</span></a>
+            </nav>
+            <nav>
+                <a href="#"><img src="./images/nav3.jpg" alt=""><span>百度VIP</span></a>
+            </nav>
+            <nav>
+                <a href="#"><img src="./images/nav4.jpg" alt=""><span>赶集</span></a>
+            </nav>
+            <nav>
+                <a href="#"><img src="./images/nav5.jpg" alt=""><span>凤凰网</span></a>
+            </nav>
+            <nav>
+                <a href="#"><img src="./images/nav6.jpg" alt=""><span>百度糯米</span></a>
+            </nav>
+        </section>
+        <!-- end 6列导航 -->
+        <!-- 新闻热词 -->
+        <section class="newshot">
+            <ul>
+                <li><a href="#">新闻热词</a></li>
+                <li><a href="#">印度榕树独木成林</a><span>新</span></li>
+                <li><a href="#">atm喊话吓跑劫匪</a><span>新</span></li>
+                <li><a href="#">挽回女友发不雅照</a><span>新</span></li>
+                <li><a href="#">3米蟒蛇现身街头</a><span>新</span></li>
+                <li><a href="#">宝宝刚出生16岁</a><span>新</span></li>
+                <li><a href="#">男子撞伤亲妈逃逸</a></li>
+                <li><a href="#">巴西雨林现巨型图</a></li>
+                <li><a href="#">家长逼停过山车</a></li>
+                <li><a href="#">福银高速翻车事故</a></li>
+                <li><a href="#">世界最长寿鱼离世</a></li>
+                <li><a href="#">莫斯科列宁墓关闭</a></li>
+                <li><a href="#">巴西发生严重骚乱</a></li>
+            </ul>
+        </section>
+        <!-- end 新闻热词 -->
+        <section class="downhd">
+            <a href="#">下载百度HD，享受极速搜索体验！</a>
+        </section>
+        <footer>©2017 Baidu &nbsp; 京ICP证030173号</footer>
+    </div>
+    <!-- end 屏幕分辨率在768~1024 -->
+    <!-- 屏幕分辨率在768以下 -->
+    <div id="respond767">
+        <div id="hidtianqi" onclick="opentianqi()">
+            
+        </div>
+        <div class="hdtop">
+            <div class="tianqi" onclick="opentianqi()">
+                <img src="./images/tianqi5.png" width="28" height="28">
+                <span>6°</span>
+                <div class="status">
+                    <p>铜仁</p>
+                    <p>58 良</p>
+                </div>
+            </div>
+            <a href="" class="userinfo"></a>
+        </div>
+        <!-- logo -->
+        <div class="logo">
+            <img src="./images/xs_logo.png" alt="百度一下,你就知道">
+        </div>
+        <!-- end logo -->
+        <!-- 搜索条 -->
+        <div class="search">
+            <form action="https://www.baidu.com/s">
+                <label>
+                    <input type="text" name="wd">
+                    <span></span>
+                    <span class="t2">
+                        <div class="hidbtn">
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                    </span>
+                </label>
+                <button type="submit">百度一下</button>
+            </form>
+        </div>
+        <!-- end 搜索条 -->
+        <!-- 导航条 -->
+            
+        <div class="nav">
+            <ul>
+                <li><a href="#"><span style="background-position: 0 -264px;"></span><p>关注</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -396px;"></span><p>新闻</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -330px;"></span><p>小说</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -462px;"></span><p>视频</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -418px;"></span><p>糯米</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -308px;"></span><p>地图</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -484px;"></span><p>贴吧</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -286px;"></span><p>图片</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -440px;"></span><p>网址</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -374px;"></span><p>推广</p></a></li>
+                <li><a href="#"><span style="background-position: 0 -506px;"></span><p>音乐</p></a></li>
+            </ul>  
+        </div>
+        <!-- end 导航条 -->
+        <!-- 新闻列表 -->
+        <div class="newslist">
+            <li class="clearfix">
+                <h2>武汉名校毕业生第一份工作都能拿多少钱？看完第一个我就哭了...</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>终于知道詹姆斯为什么这么壮了？看看他的饭量有多恐怖? 平均每天需花费300美元</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>同样是打台球，赵丽颖帅气，就连范冰冰都输给这一位！</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>国家林业局就穿山甲事件再发声：“炫耀”的是残忍</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>农村大妈去河边洗菜, 听到水面有激打的声音, 走近一看, 大赚一笔小财!</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>武汉名校毕业生第一份工作都能拿多少钱？看完第一个我就哭了...</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>终于知道詹姆斯为什么这么壮了？看看他的饭量有多恐怖? 平均每天需花费300美元</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>同样是打台球，赵丽颖帅气，就连范冰冰都输给这一位！</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>国家林业局就穿山甲事件再发声：“炫耀”的是残忍</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+            <li class="clearfix">
+                <h2>农村大妈去河边洗菜, 听到水面有激打的声音, 走近一看, 大赚一笔小财!</h2>
+                <div class="listimg clearfix">
+                    <img src="./images/listimg.jpeg" alt="">
+                    <img src="./images/listimg2.jpeg" alt="">
+                    <img src="./images/listimg3.jpeg" alt="">
+                </div>
+                <div class="news-from">
+                    <span class="src-net">次元饭</span>
+                    <span class="src-time">02-07</span>
+                </div>
+            </li>
+        </div>
+        <!-- end 新闻列表 -->
+    </div>
+    <!-- end 屏幕分辨率在768以下 -->
+
+    
+</body>
+</html>

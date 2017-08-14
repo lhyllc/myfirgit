@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Panel</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style type="text/css">
+		body{
+			font-family: "微软雅黑", "宋体";
+			background: #9e9fa3 url("img/bg.jpg") repeat;
+			background-size: 100%;
+		}
+		a {
+			color: #333;
+			text-decoration: none
+		}
+
+		a:focus,a:hover {
+			color: #000;
+			text-decoration: underline
+		}
+		.loginbox{
+			width:350px;
+			/*height:300px;*/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -200px;
+			margin-top: -150px;
+			background-color: #fafafa;
+			padding:10px;
+			border:1px solid #ececec;
+			-webkit-border-radius: 5px;
+			-moz-border-radius:5px;
+			border-radius:5px;
+			-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,.3) ;
+			-moz-box-shadow: 0px 2px 8px rgba(0,0,0,.3) ;
+			box-shadow: 0px 2px 8px rgba(0,0,0,.3) ;
+		}
+		.wid100{
+			width:100px;
+		}
+		.wid100p{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="loginbox">
+		<form action="admin.html">
+			<h4 class="text-center">后台管理登陆</h4>
+			<div class="form-group">
+				<label class="sr-only" for="user">用户名:</label>
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+					<input type="text" class="form-control" id="user" name="user" placeholder="输入用户名" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="passwd">密码:</label>
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+					<input type="password" class="form-control" id="passwd" name="passwd" placeholder="输入密码" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="yanzhengma">验证码:</label>
+				<input type="text" class="form-control wid100" id="yanzhengma" name="yanzhengma" placeholder="输入验证码" required="required">
+			</div>
+			<div class="checkbox">
+
+				<label class="checkbox-inline">
+					<input type="checkbox">7天免登陆
+				</label>
+				<p class="checkbox-inline"><a href="#">忘记密码?</a></p>
+			</div>
+			<button type="submit" class="btn btn-success wid100p">登陆</button>
+		</form>
+	</div>
+</body>
+</html>

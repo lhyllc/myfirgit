@@ -1,0 +1,387 @@
+body{
+	min-height: 500px;
+    background-color: #fff;
+    /*background: url(caodi.jpg) center -180px no-repeat;*/
+}
+body,p{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	width:130px;
+	height: 168px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -75px;
+	margin-top:-150px;
+    border-bottom: 2px solid #ccc;
+	/*background-color: #eee;*/
+}
+.header{
+	width: 100%;
+	height: 80px;
+}
+/*耳朵*/
+
+@keyframes earmove1{/*左耳动画*/
+    0%{
+        transform: rotateZ(10deg);
+    }
+    25%{
+        transform: rotateZ(30deg);
+    }
+    50%{
+        transform: rotateZ(10deg);
+    }
+    75%{
+        transform: rotateZ(30deg);
+    }
+    100%{
+        transform: rotateZ(10deg);
+    }
+}
+@keyframes earmove2{/*右耳动画*/
+    0%{
+        transform: rotateZ(25deg);
+    }
+    25%{
+        transform: rotateZ(45deg);
+    }
+    50%{
+        transform: rotateZ(25deg);
+    }
+    75%{
+        transform: rotateZ(45deg);
+    }
+    100%{
+        transform: rotateZ(25deg);
+    }
+}
+.header .ear{
+	width: 120px;
+    height: 50px;
+    position: relative;
+}
+.header .ear div{
+	width: 20px;
+    height: 50px;
+    border: 4px solid #333;
+    border-radius: 13px / 25px;
+    background-color: #fff;
+}
+.header .ear .ear-left{
+	position: absolute;
+    left: 20px;
+    transform-origin: center bottom;
+    -webkit-animation: earmove1 6s linear 0s infinite;
+    -o-animation: earmove1 6s linear 0s infinite;
+    animation: earmove1 6s linear 0s infinite;
+}
+.header .ear .ear-right{
+	position: absolute;
+    right: 25px;
+    top: 3px;
+    transform-origin: center bottom;
+    -webkit-animation: earmove2 6s linear 0s infinite;
+    -o-animation: earmove2 6s linear 0s infinite;
+    animation: earmove2 6s linear 0s infinite;
+}
+/*end 耳朵*/
+/*脸蛋*/
+.face{
+	width: 120px;
+    height: 90px;
+    background-color: #fff;
+    position: absolute;
+    border: 4px solid #333;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    top: 15px;
+    transform: rotateZ(3deg);
+}
+/*发夹*/
+.fajia{
+	position: relative;
+	top: 10px;
+	z-index: 10;
+}
+.fajia-left{
+	width: 16px;
+    height: 14px;
+    border: 2px solid #333;
+    background-color: #5affe6;
+    border-radius: 45%;
+    position: absolute;
+}
+.fajia-middle{
+	width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    background-color: #5affe6;
+    border-radius: 45%;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+.fajia-right{
+	width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    background-color: #5affe6;
+    border-radius: 50% 30% 40% 26%;
+    position: absolute;
+    left: 18px;
+}
+/*end 发夹*/
+/*眼睛*/
+/*@-webkit-keyframes eyemove{
+    0%{
+        transform:translateX(0px) translateY(0px);
+    }
+    25%{
+        transform:translateX(2px) translateY(2px);
+    }
+    75%{
+        transform:translateX(-2px) translateY(-2px);
+    }
+    100%{
+        transform:translateX(0px) translateY(0px);
+    }
+}*/
+.eye{
+	position: absolute;
+	top: 20px;
+	left:20px;
+	width:80px;
+}
+.eye .eye-left{
+	position: absolute;
+	width: 15px;
+    height: 25px;
+    border: 1px solid #000;
+    background-color: #333;
+    border-radius: 18px/26px;
+    transform: rotateZ(14deg) translateY(15px);
+}
+.eye .eye-left p{/*左眼球*/
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: block;
+	position: absolute;
+	top: 8px;
+    left: 5px;
+    /*animation: eyemove 6s linear 0s infinite;*/
+}
+.eye .eye-right{
+	width: 15px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    border: 1px solid #000;
+    background-color: #333;
+    border-radius: 18px/26px;
+    transform: rotateZ(-14deg) translateY(15px);
+}
+.eye .eye-right p{/*右眼球*/
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: block;
+	position: absolute;
+	top: 8px;
+    left: 5px;
+    /*animation: eyemove 6s linear 0s infinite;*/
+}
+/*end 眼睛*/
+/*腮红*/
+.saihong{
+    width: 90px;
+    height: 50px;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 52px;
+    z-index: -1;
+}
+.saihong p:nth-child(1){
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.8;
+    background-color: #E91E63;
+    box-shadow: 0px 0px 16px 0px #E91E63;
+}
+.saihong p:nth-child(2){
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    background-color: #E91E63;
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px 0px #E91E63;
+}
+/*end 腮红*/
+/*鼻子*/
+.nose{
+	width: 10px;
+    height: 10px;
+    border: 3px solid #333;
+    border-left: 0;
+    border-top: 0;
+    position: absolute;
+    top: 62px;
+    left: 55px;
+    transform: rotateZ(-135deg);
+    border-radius: 5px;
+}
+.nose:after{
+	content: "";
+    width: 3px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 2px;
+    display: block;
+    transform: rotateZ(-44deg) translateY(14px) translateX(2px);
+}
+/*end 鼻子*/
+/*身体部分*/
+.main{
+	width: 88px;
+    height: 68px;
+    border: 4px solid #333;
+    background-color: #FF9800;
+    border-radius: 50px 50px 20px 20px;
+    margin-left: 16px;
+    position: relative;
+    z-index: -1;
+}
+/*手臂*/
+@keyframes handleftmove{
+    0%{
+        transform: translateX(13px) rotateZ(40deg);
+    }
+    25%{
+        transform: translateX(13px) rotateZ(45deg);
+    } 
+    50%{
+        transform: translateX(13px) rotateZ(40deg);
+    }
+    75%{
+        transform: translateX(13px) rotateZ(30deg);
+    }
+    100%{
+        transform: translateX(13px) rotateZ(40deg);
+    }
+}
+@keyframes handrightmove{
+    0%{
+        transform: rotateZ(-30deg);
+    }
+    25%{
+        transform: rotateZ(-20deg);
+    } 
+    50%{
+        transform: rotateZ(-30deg);
+    }
+    75%{
+        transform: rotateZ(-35deg);
+    }
+    100%{
+        transform: rotateZ(-30deg);
+    }
+}
+.hand{
+    width: 100px;
+    height: 42px;
+    margin-left: 20px;
+    position: relative;
+    top: -64px;
+}
+.hand-left{
+	width: 12px;
+    height: 42px;
+    border: 4px solid #333;
+    background-color: #fff;
+    border-radius: 10px/17px;
+    position: absolute;
+    z-index: -2;
+    transform-origin: center top;
+    -webkit-animation: handleftmove 2s linear 0s infinite;
+    -o-animation:  handleftmove 2s linear 0s infinite;
+    animation:  handleftmove 2s linear 0s infinite;
+
+}
+.hand-right{
+	width: 12px;
+    height: 30px;
+    border: 4px solid #333;
+    background-color: #fff;
+    border-radius: 10px/15px;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: -2;
+    transform-origin: center top;
+    -webkit-animation: handrightmove 2s linear 0s infinite;
+    -o-animation:  handrightmove 2s linear 0s infinite;
+    animation:  handrightmove 2s linear 0s infinite;
+}
+/*end 手臂*/
+/*腿部*/
+@keyframes footermove{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(3px);
+    }
+    50%{
+        transform: translateY(6px);
+    }
+    75%{
+        transform: translateY(3px);
+    }
+   100%{
+        transform: translateY(0px);
+    }
+}
+.footer{
+	width: 70px;
+    height: 30px;
+    margin-top: -58px;
+    margin-left: 28px;
+    position: relative;
+    z-index: -2;
+}
+.footer-left{
+	width: 25px;
+	height: 15px;
+	border:4px solid #333;
+	background-color: #fff;
+	border-radius: 18px;
+	position: absolute;
+    -webkit-animation: footermove 2s linear 0s infinite;
+    -o-animation: footermove 2s linear 0s infinite;
+    animation: footermove 2s linear 0s infinite;
+}
+.footer-right{
+	width: 25px;
+	height: 15px;
+	border:4px solid #333;
+	background-color: #fff;
+	border-radius: 18px;
+	position: absolute;
+	right: 0px;
+	-webkit-animation: footermove 2s linear 1s infinite;
+    -o-animation: footermove 2s linear 1s infinite;
+    animation: footermove 2s linear 1s infinite;
+}
+
+/*end 腿部*/

@@ -1,0 +1,41 @@
+body{
+	background: url(../static/bg.jpg);
+}
+header{
+	height: 140px;
+	background: #f5f5f5;
+	border: 1px solid #ddd;
+	border-top: 0;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.wid750{
+	width: 850px;
+}
+p{
+	text-indent: 2em;
+}
+.gotop{
+	position: fixed;
+    left: 50%;
+    margin-left: 450px;
+    bottom: 83px;
+    width: 34px;
+    text-align: center;
+    z-index: 100;
+    /*background-color: #333;*/
+}
+.gotop>.sidtop{
+	width: 34px;
+	height: 34px;
+	display:block;
+	cursor: pointer;
+	background:url(../static/gotop.jpg) no-repeat 0 0;
+	background-size: 34px;
+}
+.gotop>.sidtop:hover{
+	background:url(../static/gotop2.jpg) no-repeat 0 0;
+	background-size: 34px;
+}

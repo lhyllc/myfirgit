@@ -1,0 +1,147 @@
+@colorG: #016701;/*绿色*/
+@colorR: #fe0000;/*红色*/
+@colorW: #fafafa;/*白色*/
+@colorB: #333333;/*黑色*/
+@colorD: #dedede;
+.box-sizing{
+  box-sizing:border-box;
+}
+h1,h2,ul,li{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+.cf{
+	zoom: 1;
+	&:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+/*公交站站牌*/
+.stationBoard {
+    width: 800px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-200px;
+    margin-left:-400px;
+    padding:5px;
+    background:darken(@colorW, 5%);
+    box-shadow: 0 0 10px @colorB;
+    border-radius:5px;
+}
+/*公交车号码*/
+.busNumber {
+    width: 200px;
+    float: left;
+    text-align:center;
+    .numbox {
+        width: 100%;
+        height: 120px;
+        background: @colorR;
+        line-height:120px;
+        font-size:90px;
+        color:@colorW;
+    }
+}
+/*起始站 终点站*/
+.sourceAndDest {
+    width: 600px;
+    float: right;
+    text-align: center;
+    .title {
+    	color:@colorG;
+    	margin-top:20px;
+        .source {
+        	width:45%;
+        	float:left;
+            p {
+                text-transform: Uppercase;
+            }
+        }
+        .dest {
+        	width:45%;
+        	float:right;
+            p {
+                text-transform: Uppercase;
+            }
+        }
+        .line{
+        	float:left;
+        	width: 10%;
+        	i{
+        		width: 100%;
+        		height:10px;
+        		display:block;
+        		border-top: 3px solid  #016701;
+        		position: relative;
+    			top: 20px;
+        	}
+        }
+    }
+    h2{
+    	color:@colorR;
+    }
+}
+/*站名*/
+.stationcon {
+	width:100%;
+	padding:5px 10px;
+	font-size:0;
+	background:@colorG;
+	color:@colorD;
+	.box-sizing();
+	ul li{
+		display:inline-block;
+		font-size:18px;
+		width:4%;
+		height:200px;
+		text-align:center;
+		vertical-align:middle;
+		.box-sizing();
+		padding:2px;
+    &.active {
+    	color:darken(@colorR, 10%);
+    	background:darken(@colorG, 5%);
+    }
+	}
+
+}
+/*行驶方向*/
+.fangx {
+    width: 100%;
+    margin: 10px;
+    padding: 0 20px;
+    .box-sizing();
+    p{
+    	margin:0;
+    	text-align:center;
+    }
+    span {
+        display: inline-block;
+        width: 87%;
+        height: 10px;
+        background: @colorR;
+        i {
+            position: absolute;
+            right: 25px;
+            bottom: 19px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-left: 100px solid @colorR;
+            /* border-bottom: 50px solid transparent; */
+        }
+    }
+}

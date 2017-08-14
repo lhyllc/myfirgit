@@ -1,0 +1,148 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: arial;
+	color: #607D8B;
+	background-color: #000;
+}
+li{
+	list-style: none;
+}
+h2{
+	text-align: center;
+	margin-top: 100px;
+}
+/*外部定位容器*/
+.view{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -90px;
+	margin-top: -90px;
+	perspective: 3000px;/*透视距离*/
+	-webkit-perspective: 3000px;
+	-moz-perspective: 3000px;
+	-ms-perspective: 3000px;
+	/*background-color: #333;*/
+}
+/*end外部定位容器*/
+/*立方体盒子*/
+#box{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;/*3D 渲染*/
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	animation: spin 6s linear 0s infinite;/*调用动画*/
+	-webkit-animation: spin 6s linear 0s infinite;
+	-moz-animation: spin 6s linear 0s infinite;
+	-ms-animation: spin 6s linear 0s infinite;
+}
+/*end立方体盒子*/
+#box div{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	/*opacity: 0.5;*/
+}
+#box div li{
+	width: 58px;
+	height: 58px;
+	float: left;
+	border-radius: 10px;
+	border:1px solid #fff;
+}
+/*立方体六个面的位置*/
+#box .front{
+	transform: translateZ(90px);
+	-webkit-transform: translateZ(90px);
+	-moz-transform: translateZ(90px);
+	-ms-transform: translateZ(90px);
+}
+#box .bottom{
+	transform: rotateX(-90deg) translateZ(90px);
+	-webkit-transform: rotateX(-90deg) translateZ(90px);
+	-moz-transform: rotateX(-90deg) translateZ(90px);
+	-ms-transform: rotateX(-90deg) translateZ(90px);
+}
+#box .top{
+	transform: rotateX(90deg) translateZ(90px);
+	-webkit-transform: rotateX(90deg) translateZ(90px);
+	-moz-transform: rotateX(90deg) translateZ(90px);
+	-ms-transform: rotateX(90deg) translateZ(90px);
+}
+#box .left{
+	transform: rotateY(-90deg) translateZ(90px);
+	-webkit-transform: rotateY(-90deg) translateZ(90px);
+	-moz-transform: rotateY(-90deg) translateZ(90px);
+	-ms-transform: rotateY(-90deg) translateZ(90px);
+}
+#box .right{
+	transform: rotateY(90deg) translateZ(90px);
+	-webkit-transform: rotateY(90deg) translateZ(90px);
+	-moz-transform: rotateY(90deg) translateZ(90px);
+	-ms-transform: rotateY(90deg) translateZ(90px);
+}
+#box .back{
+	transform: translateZ(-90px);
+	-webkit-transform: translateZ(-90px);
+	-moz-transform: translateZ(-90px);
+	-ms-transform: translateZ(-90px);
+}
+/* end 立方体六个面的位置*/
+/*每个面九宫格的颜色*/
+#box .front li{
+	background-color: #f44336;
+}
+#box .bottom li{
+	background-color: #4CAF50;
+}
+#box .top li{
+	background-color: #FF9800;
+}
+#box .left li{
+	background-color: #03A9F4;
+}
+#box .right li{
+	background-color: #795548;
+}
+#box .back li{
+	background-color: #9C27B0;
+}
+/* end 每个面九宫格的颜色*/
+/*旋转动画*/
+@keyframes spin{
+	0% {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+@-webkit-keyframes spin{
+	0% {
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+@-moz-keyframes spin{
+	0% {
+		-moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100% {
+		-moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+
+/*end旋转动画*/

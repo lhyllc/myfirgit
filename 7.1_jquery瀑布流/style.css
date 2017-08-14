@@ -1,0 +1,73 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: #333;
+}
+.cf:after{
+	display: block;
+	height: 0;
+	content: "";
+	clear: both;
+	overflow: hidden;
+}
+.cf{
+	zoom: 1;
+}
+
+h1{
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+	line-height: 80px;
+	font-size: 24px;
+	color: #fff;
+}
+/*图片墙容器*/
+.picturewall{
+	width: 1105px;
+	margin: 0 auto;
+	position: relative;
+}
+/*图片盒子样式*/
+.picturewall .picbox{
+	width: 220px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ececec;
+	box-shadow: 0 0 5px #ddd;
+	border-radius: 5px;
+	float: left;
+	position: relative;
+	background: #fff;
+	margin-left: 1px;
+	margin-bottom: 1px;
+	cursor: pointer;
+}
+/*图片信息样式*/
+.picturewall .picbox .picinfo{
+	width: 200px;
+	line-height: 40px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 14px;
+	left: 10px;
+	font-size: 14px;
+	background: rgba(0,0,0,.5);
+	text-align: center;
+	color: #fff;
+	opacity: 0;
+	height: 0;
+	transition: height,opacity .5s linear 0s;
+}
+.picturewall .picbox:hover .picinfo{
+	height: 40px;
+	opacity: 1;
+	transition: height,opacity .5s linear 0s;
+}
+/*图片样式、*/
+.picturewall .picbox img{
+	width: 200px;
+	height: auto;
+}

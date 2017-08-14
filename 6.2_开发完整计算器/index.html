@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<script type="text/javascript" src="calc.js"></script>
+</head>
+
+<body>
+	<div class="view">
+		<!-- 计算器标题 -->
+		<div class="header">简易计算器</div>
+		<!-- end 计算器标题 -->
+		<!-- 数字显示屏幕 -->
+		<div class="screen" id="screen"></div>
+		<!-- end 数字显示屏幕 -->
+		<!-- 提示信息 -->
+		<div id="msg"></div>
+		<!-- end 提示信息 -->
+		<!-- 按钮组 -->
+		<div class="numbox">
+			<!-- 第一排 -->
+			<button onclick="showHistory()">记录</button>
+			<button onclick="changeZF()">+/-</button>
+			<button onclick="getYsf(this)">%</button>
+			<button onclick="getYsf(this)">÷</button>
+			<button onclick="getKXJS(this)" title="正弦">sin</button>
+			<!-- 第二排 -->
+			<button onclick="getNum(this)">7</button>
+			<button onclick="getNum(this)">8</button>
+			<button onclick="getNum(this)">9</button>
+			<button onclick="getYsf(this)">×</button>
+			<button onclick="getKXJS(this)" title="余弦">cos</button>
+			<!-- 第三排 -->
+			<button onclick="getNum(this)">4</button>
+			<button onclick="getNum(this)">5</button>
+			<button onclick="getNum(this)">6</button>
+			<button onclick="getYsf(this)">-</button>
+			<button onclick="getKXJS(this)" title="正切">tan</button>
+			<!-- 第四排 -->
+			<button onclick="getNum(this)">1</button>
+			<button onclick="getNum(this)">2</button>
+			<button onclick="getNum(this)">3</button>
+			<button onclick="getYsf(this)">+</button>
+			<button onclick="getYsf(this)" title="求幂">∧</button>
+			<!-- 第五排 -->
+			<button onclick="getNum(this)">0</button>
+			<button onclick="getPoint(this)">.</button>
+			<button onclick="clearAll()">清屏</button>
+			<button onclick="getResult()">=</button>
+			<button onclick="getKaigen(this)" title="开平方根">√</button>
+		</div>
+		<!-- end 按钮组 -->
+	</div>
+	<div id="historywrapper">
+		<h3>历史记录<span onclick="clearHistory()">清空记录</span></h3>
+		<div id="history"></div>
+	</div>
+</body>
+</html>
